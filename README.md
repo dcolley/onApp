@@ -1,5 +1,7 @@
 # onApp - OpenNMS Mobile Client
 
+It's based on AngularJS webapp running inside Cordova
+
 # Running as a Mobile App
 
 *WIP... basically, install cordova and launch*
