@@ -43,5 +43,6 @@ The only way I have managed to do this is to run OpenNMS via Apache ProxyPass
 
 0.0.2
 
+ * dynamic config for webapp or mobile app - currently manual at build time
 
 0.1 
