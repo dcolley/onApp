@@ -1,14 +1,20 @@
-onApp
-=====
+# onApp - OpenNMS Mobile Client
 
-OpenNMS Mobile Client
+# Running as a webapp
+Hosting the www directory on a web server or running directly from index.html produces an error (viewable in the javascript console):
 
+*Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://hostname/opennms/rest/nodes. This can be fixed by moving the resource to the same domain or enabling CORS.*
 
-OpenNMS behind Apache Proxy
+### Enable CORS on OpenNMS
+The only way I have managed to do this is to run OpenNMS via Apache ProxyPass
 
+### OpenNMS behind Apache Proxy
+---------------------------
+
+```
 <Location "/opennms/">
-  ProxyPass http://192.168.1.25:8980/opennms/
-  ProxyPassReverse http://192.168.1.25:8980/opennms/
+  ProxyPass http://<internal_ip>:8980/opennms/
+  ProxyPassReverse http://internal_ip:8980/opennms/
   Header always set Access-Control-Allow-Origin "*"
   Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"
   Header always set Access-Control-Allow-Headers "x-requested-with, Content-Type, origin, authorization, accept, client-security-token"
@@ -16,3 +22,4 @@ OpenNMS behind Apache Proxy
   RewriteCond %{REQUEST_METHOD} OPTIONS
   RewriteRule ^(.*)$ $1 [R=200,L]
 </Location>
+```
