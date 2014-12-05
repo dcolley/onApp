@@ -51,7 +51,9 @@ The only way I have managed to do this is to run OpenNMS via Apache ProxyPass
 
 0.0.n
 
- * push notifications to device
+ * notifications on device icon
+   * push notifications
+   * IOS: Background App Refresh
  * config multiple account with credentials 
    * similar to email
    * allow user to switch between
