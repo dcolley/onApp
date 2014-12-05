@@ -1,0 +1,34 @@
+{
+  "name": "onApp",
+  "version": "0.0.1",
+  "homepage": "https://github.com/dcolley/onApp",
+  "description": "OpenNMS Mobile Client",
+  "keywords": [
+    "opennms",
+    "angular",
+    "mobile"
+  ],
+  "authors": [
+    "derek@netsimple.net"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-aria": "~1.3.4",
+    "angular-material": "~0.5.1",
+    "angular-resource": "~1.3.4",
+    "angular-sanitize": "~1.3.5",
+    "angular-touch": "~1.3.4",
+    "sails.io.js": "~0.10.3",
+    "socket.io": "~1.2.1",
+    "mobile-angular-ui": "~1.1.0-beta.30",
+    "ngstorage": "~0.3.0",
+    "angular-ui-router": "~0.2.13"
+  }
+}

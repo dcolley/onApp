@@ -1,0 +1,26 @@
+<div content-for="stitle">Outages</div>
+
+<div content-for="rightNavbarAction">
+	<div ng-click="refreshList()" class="btn btn-navbar sidebar-toggle">
+		<i class="fa fa-refresh"></i> Refresh
+	</div>
+	<!-- <div ng-click="go('user.action.add')" class="btn btn-navbar sidebar-toggle">
+		<i class="fa fa-plus"></i> Add
+	</div> -->
+</div>
+
+<input type="search" class="form-control app-search" ng-model="search['@label']" placeholder="Search.." />
+
+<div class="list-group" when-scrolled="loadMore()">
+
+	<div class="list-group-item media" ng-repeat="outage in $storage.outages | filter:search:strict">
+		<div class="media-body">
+			<h4 class="media-heading">{{ outage.ipAddress }}</h4>
+			{{ outage.ifLostService }} - {{ outage.ifRegainedService }}
+		</div>
+		<div class="pull-right">
+			<i class="fa fa-chevron-right feature-icon text-primary"></i>
+		</div>
+	</div>
+
+</div>

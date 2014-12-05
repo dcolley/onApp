@@ -1,0 +1,31 @@
+<div content-for="stitle">Nodes</div>
+
+<div content-for="rightNavbarAction">
+	<div ng-click="refreshList()" class="btn btn-navbar sidebar-toggle">
+		<i class="fa fa-refresh"></i> Refresh
+	</div>
+	<!-- <div ng-click="go('user.action.add')" class="btn btn-navbar sidebar-toggle">
+		<i class="fa fa-plus"></i> Add
+	</div> -->
+</div>
+
+<input type="search" class="form-control app-search" ng-model="search.label" placeholder="Search.." />
+
+<div class="list-group" when-scrolled="loadMore()" style="border-bottom: red 2px solid">
+
+	<div class="list-group-item media" ng-repeat="model in $storage.nodes | filter:search:strict">
+		<div class="media-body">
+			<h4 class="media-heading">{{ model.label }}</h4>
+		</div>
+		<div class="pull-right">
+			<i class="fa fa-chevron-right feature-icon text-primary"></i>
+		</div>
+	</div>
+
+	<div class="list-group-item media">
+		<div class="media-body centre">
+			<button ng-click="loadMore()">More...</button>
+		</div>
+	</div>
+
+</div>

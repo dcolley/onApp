@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+		id        = "net.netsimple.opennms.onapp"
+		version   = "1.0.0">
+
+	<name>onApp</name>
+
+	<description>
+		OpenNMS Mobile Client
+	</description>
+
+	<author href="http://netsimple.net" email="support@netsimple.net">
+		netSimple Limited
+	</author>
+
+	<content src="index.html" />
+	<access origin="*"/>
+
+</widget>

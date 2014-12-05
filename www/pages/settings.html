@@ -1,0 +1,74 @@
+
+<div content-for="leftNavbarAction"></div>
+<div content-for="rightNavbarAction">
+	<div ng-click="reset()" class="btn btn-navbar sidebar-toggle">
+		<i class="fa fa-refresh"></i> Reset
+	</div>
+</div>
+
+<form>
+
+	<input
+		bs-form-control
+		type="text"
+		ng-model="settings.protocol"
+		label="Protocol"
+		label-class="col-xs-3 col-sm-2 col-lg-1"
+		class="col-xs-9 col-sm-10 col-lg-11"
+		placeholder="http"
+	/>
+
+	<input
+		bs-form-control
+		type="text"
+		ng-model="settings.hostname"
+		label="Hostname"
+		label-class="col-xs-3 col-sm-2 col-lg-1"
+		class="col-xs-9 col-sm-10 col-lg-11"
+		placeholder="demo.opennms.org"
+	/>
+
+	<input
+		bs-form-control
+		type="text"
+		ng-model="settings.port"
+		label="Port"
+		label-class="col-xs-3 col-sm-2 col-lg-1"
+		class="col-xs-9 col-sm-10 col-lg-11"
+		placeholder="80"
+	/>
+
+	<input
+		bs-form-control
+		type="text"
+		ng-model="settings.service"
+		label="Service"
+		label-class="col-xs-3 col-sm-2 col-lg-1"
+		class="col-xs-9 col-sm-10 col-lg-11"
+		placeholder="opennms/rest"
+	/>
+
+	<input
+		bs-form-control
+		type="text"
+		ng-model="settings.username"
+		label="Username"
+		label-class="col-xs-3 col-sm-2 col-lg-1"
+		class="col-xs-9 col-sm-10 col-lg-11"
+		placeholder="demo"
+	/>
+
+	<input
+		bs-form-control
+		type="password"
+		ng-model="settings.password"
+		label="Password"
+		label-class="col-xs-3 col-sm-2 col-lg-1"
+		class="col-xs-9 col-sm-10 col-lg-11"
+		placeholder="demo"
+	/>
+
+
+	<button ng-click="save()">Save</button>
+
+</form>

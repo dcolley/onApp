@@ -1,0 +1,37 @@
+<div content-for="stitle">Events</div>
+
+<div content-for="rightNavbarAction">
+	<div ng-click="refreshList()" class="btn btn-navbar sidebar-toggle">
+		<i class="fa fa-refresh"></i> Refresh
+	</div>
+	<!-- <div ng-click="go('user.eventAdd')" class="btn btn-navbar sidebar-toggle">
+		<i class="fa fa-plus"></i> Add
+	</div> -->
+</div>
+
+<input type="search" class="form-control app-search" ng-model="search.description" placeholder="Search.." />
+
+<div class="list-group" when-scrolled="loadMore()">
+
+	<div class="list-group-item media" ng-repeat="model in $storage.events | filter:search:strict"
+		ng-class="{'CRITICAL':'Critical','MINOR':'Minor','NORMAL':'Normal', 'INDETERMINATE':'Indeterminate','WARNING':'Warning','MAJOR':'Major'}[model.severity]">
+		<div class="media-body">
+			<h4 class="media-heading">{{ model['@id'] }} <span ng-bind-html="model.logMessage"></span></h4>
+			<div ng-bind-html="model.description"></div>
+			{{ model.time }}
+		</div>
+		<div class="pull-right"
+			ng-class="{'MINOR':'btn-warning','NORMAL':'btn-success','WARNING':'btn-warning','MAJOR':'btn-danger'}[model.severity]">
+			{{ model['@severity'] }}
+		</div>
+		<div class="pull-right">
+			<i class="fa fa-chevron-right feature-icon text-primary"></i>
+		</div>
+	</div>
+	<div class="list-group-item media">
+		<div class="media-body centre">
+			<button ng-click="loadMore()">More...</button>
+		</div>
+	</div>
+
+</div>
