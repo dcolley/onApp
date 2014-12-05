@@ -39,6 +39,7 @@ The only way I have managed to do this is to run OpenNMS via Apache ProxyPass
 
  * establish Angular $resource parity with OpenNMS API - started
  * basic lists of each object type: event, outage, node etc.
+ * config single account with credentials 
 
 0.0.2
 
@@ -51,5 +52,9 @@ The only way I have managed to do this is to run OpenNMS via Apache ProxyPass
 0.0.n
 
  * push notifications to device
+ * config multiple account with credentials 
+   * similar to email
+   * allow user to switch between
+     * how will this affect push notifications?
 
 0.1 
