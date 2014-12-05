@@ -2,8 +2,12 @@
 
 # Running as a Mobile App
 
-WIP... basically, install cordova and launch 
-```cordova simulate ios```
+*WIP... basically, install cordova and launch*
+```
+cordova platform add ios
+cordova build ios
+cordova emulate ios --target=iPad-Retina  # nice large screen ;)
+```
 
 # Running as a webapp
 Hosting the www directory on a web server or running directly from index.html produces an error (viewable in the javascript console):
@@ -28,3 +32,16 @@ The only way I have managed to do this is to run OpenNMS via Apache ProxyPass
   RewriteRule ^(.*)$ $1 [R=200,L]
 </Location>
 ```
+
+# Roadmap
+
+0.0.1
+
+ * establish Angular $resource parity with OpenNMS API
+ * basic lists of each object type: event, outage, node etc.
+ * 
+
+0.0.2
+
+
+0.1 
