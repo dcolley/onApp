@@ -2,13 +2,41 @@
 
 It's based on AngularJS webapp running inside Cordova
 
+# Dependencies
+
+ * Git
+ * Bower
+ * AngularJS (and various modules)
+ * ui-router
+ * mobile-angular-ui
+ * cordova
+
+# Getting started
+
+```
+git clone https://github.com/dcolley/onApp
+cd www
+bower install            # installs the js libraries
+```
+
 # Running as a Mobile App
 
-*WIP... basically, install cordova and launch*
+*basically, install cordova platform and launch*
+
+## iOS
+
 ```
 cordova platform add ios
 cordova build ios
 cordova emulate ios --target=iPad-Retina  # nice large screen ;)
+```
+
+## Android
+
+```
+cordova platform add android
+cordova build android
+cordova emulate android [--target=nameoftarget]
 ```
 
 # Running as a webapp
