@@ -1,5 +1,10 @@
 # onApp - OpenNMS Mobile Client
 
+# Running as a Mobile App
+
+WIP... basically, install cordova and launch 
+```cordova simulate ios```
+
 # Running as a webapp
 Hosting the www directory on a web server or running directly from index.html produces an error (viewable in the javascript console):
 
