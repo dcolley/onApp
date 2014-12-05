@@ -37,12 +37,19 @@ The only way I have managed to do this is to run OpenNMS via Apache ProxyPass
 
 0.0.1
 
- * establish Angular $resource parity with OpenNMS API
+ * establish Angular $resource parity with OpenNMS API - started
  * basic lists of each object type: event, outage, node etc.
- * 
 
 0.0.2
 
- * dynamic config for webapp or mobile app - currently manual at build time
+ * app navigation, responsive design etc.
+ * css styling - similar look to OpenNMS
+ * dynamic config for webapp or mobile app - currently manual at build time e.g.
+   * www/index.html: cordova.js only required for mobile
+   * www/index.html: base tag only required for webapp
+
+0.0.n
+
+ * push notifications to device
 
 0.1 
